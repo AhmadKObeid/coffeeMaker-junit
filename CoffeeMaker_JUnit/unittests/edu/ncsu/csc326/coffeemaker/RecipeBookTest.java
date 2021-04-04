@@ -70,12 +70,12 @@ public class RecipeBookTest {
 	public void addRecipeSucceedsTest()
 	{
 		assertTrue(recipeBook.addRecipe(r2));
-		assertEquals("Mocha", recipeBook.getRecipes()[0].getName());
-		assertEquals(20,recipeBook.getRecipes()[0].getAmtChocolate());
-		assertEquals(3,recipeBook.getRecipes()[0].getAmtCoffee());
-		assertEquals(1,recipeBook.getRecipes()[0].getAmtMilk());
-		assertEquals(1,recipeBook.getRecipes()[0].getAmtSugar());
-		assertEquals(75,recipeBook.getRecipes()[0].getPrice());
+		assertEquals("Recipe_2", recipeBook.getRecipes()[0].getName());
+		assertEquals(6,recipeBook.getRecipes()[0].getAmtChocolate());
+		assertEquals(7,recipeBook.getRecipes()[0].getAmtCoffee());
+		assertEquals(8,recipeBook.getRecipes()[0].getAmtMilk());
+		assertEquals(9,recipeBook.getRecipes()[0].getAmtSugar());
+		assertEquals(10,recipeBook.getRecipes()[0].getPrice());
 	}
 	
 	//Checks that a recipe cannot be added if it is null or empty obj	 
@@ -130,7 +130,7 @@ public class RecipeBookTest {
 	{
 		recipeBook.addRecipe(r1);
 		String deleted = recipeBook.deleteRecipe(0);
-		assertEquals("Coffee",deleted);
+		assertEquals("Recipe_1",deleted);
 	}
 	
 	//Delete a recipe that does not exist
@@ -150,13 +150,13 @@ public class RecipeBookTest {
 	public void editRecipeSuccessTest()
 	{
 		recipeBook.addRecipe(r1);
-		assertEquals("Coffee",recipeBook.editRecipe(0, r2));
-		assertEquals("Mocha", recipeBook.getRecipes()[0].getName());
-		assertEquals(20,recipeBook.getRecipes()[0].getAmtChocolate());
-		assertEquals(3,recipeBook.getRecipes()[0].getAmtCoffee());
-		assertEquals(1,recipeBook.getRecipes()[0].getAmtMilk());
-		assertEquals(1,recipeBook.getRecipes()[0].getAmtSugar());
-		assertEquals(75,recipeBook.getRecipes()[0].getPrice());
+		assertEquals("Recipe_1",recipeBook.editRecipe(0, r2));
+		assertEquals("Recipe_2", recipeBook.getRecipes()[0].getName());
+		assertEquals(6,recipeBook.getRecipes()[0].getAmtChocolate());
+		assertEquals(7,recipeBook.getRecipes()[0].getAmtCoffee());
+		assertEquals(8,recipeBook.getRecipes()[0].getAmtMilk());
+		assertEquals(9,recipeBook.getRecipes()[0].getAmtSugar());
+		assertEquals(10,recipeBook.getRecipes()[0].getPrice());
 	}
 	
 
